@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<p id="Before"></p>
+<p id="number"></p>
+<script>
+    function check(k) {
+        let flag = false;
+        let b = '0123456789';
+        for (let i = 0; i < b.length; i++) {
+            if (k == b[i]) {
+                flag = true;
+                break;
+            }
+        }
+        return flag;
+    }
+    let n = +prompt('Nhập');
+    parseInt(n);
+    let a = [];
+    for (let i = 0; i < n; i++) {
+        a[i] = prompt('Nhập số thứ ' + (i + 1));
+    }
+    document.getElementById("Before").innerHTML = 'Mảng là: '  + a;
+    let count = 0;
+    for (let i = 0; i < a.length; i++) {
+        if (check(a[i])) {
+            count += 1;
+        }
+    }
+    document.getElementById('number').innerHTML = 'Mảng có ' + count + ' số'
+
+</script>
+</html>
